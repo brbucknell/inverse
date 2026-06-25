@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "@fontsource/cinzel/400.css";
 
 export const metadata: Metadata = {
   title: "The Anomaly",
