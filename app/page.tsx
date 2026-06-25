@@ -21,32 +21,31 @@ export default function Home() {
 
       <div className="absolute inset-0 bg-black/10" />
 
-      <section className="relative z-10 min-h-screen px-20 pt-16">
-        <h1 className="text-4xl font-bold text-black drop-shadow-lg">
-          The Anomaly
-        </h1>
+       <header className="pt-8 text-center">
+    <h1 className="font-cinzel-deco text-6xl font-bold text-black drop-shadow-[2px_2px_3px_rgba(255,255,255,0.5)]">
+      The Anomaly
+    </h1>
 
-        <div className="mt-8 max-w-xl">
-          <h2 className="text-3xl font-bold text-yellow-400 drop-shadow-[2px_2px_1px_black]">
-            Universe Name
-          </h2>
+    <h2 className="mt-4 text-3xl font-bold text-yellow-400 drop-shadow-[2px_2px_1px_black]">
+      Universe Name
+    </h2>
 
-          <h3 className="mt-2 text-xl font-bold text-yellow-400 drop-shadow-[2px_2px_1px_black]">
-            Planet Name
-          </h3>
+    <h3 className="mt-1 text-xl font-semibold text-yellow-300 drop-shadow-[2px_2px_1px_black]">
+      Planet Name
+    </h3>
 
-          <nav className="mt-6 space-y-3 text-2xl font-bold">
-            {realms.map((realm) => (
-              <div
-                key={realm.name}
-                className={`${realm.className} drop-shadow-[2px_2px_1px_black]`}
-              >
-                {realm.name}
-              </div>
-            ))}
-          </nav>
-        </div>
-
+    {/* Horizontal Menu */}
+    <nav className="mt-8 flex justify-center gap-10 text-xl font-bold">
+      {realms.map((realm) => (
+        <button
+          key={realm.name}
+          className={`${realm.className} transition-all duration-300 hover:scale-110 hover:tracking-widest drop-shadow-[2px_2px_1px_black]`}
+        >
+          {realm.name}
+        </button>
+      ))}
+    </nav>
+  </header>
         <div className="absolute bottom-0 right-0 h-[42vh] w-[58vw] bg-black/70 px-16 py-14">
           <h2 className="text-3xl font-bold text-white drop-shadow-lg">
             The Latest
