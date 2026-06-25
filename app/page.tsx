@@ -21,32 +21,33 @@ export default function Home() {
 
       <div className="absolute inset-0 bg-black/10" />
 
-       <header className="pt-8 text-center">
-    <h1 className="font-cinzel-deco text-6xl font-bold text-black drop-shadow-[2px_2px_3px_rgba(255,255,255,0.5)]">
-      The Anomaly
-    </h1>
+      <section className="relative z-10 min-h-screen">
+        <header className="pt-8 text-center">
+          <h1 className="font-cinzel-deco text-6xl font-bold text-black drop-shadow-[2px_2px_3px_rgba(255,255,255,0.5)]">
+            The Anomaly
+          </h1>
 
-    <h2 className="mt-4 text-3xl font-bold text-yellow-400 drop-shadow-[2px_2px_1px_black]">
-      Universe Name
-    </h2>
+          <h2 className="mt-4 text-3xl font-bold text-yellow-400 drop-shadow-[2px_2px_1px_black]">
+            Universe Name
+          </h2>
 
-    <h3 className="mt-1 text-xl font-semibold text-yellow-300 drop-shadow-[2px_2px_1px_black]">
-      Planet Name
-    </h3>
+          <h3 className="mt-1 text-xl font-semibold text-yellow-300 drop-shadow-[2px_2px_1px_black]">
+            Planet Name
+          </h3>
 
-    {/* Horizontal Menu */}
-    <nav className="mt-8 flex justify-center gap-10 text-xl font-bold">
-      {realms.map((realm) => (
-        <button
-          key={realm.name}
-          className={`${realm.className} transition-all duration-300 hover:scale-110 hover:tracking-widest drop-shadow-[2px_2px_1px_black]`}
-        >
-          {realm.name}
-        </button>
-      ))}
-    </nav>
-  </header>
-        <div className="absolute bottom-0 right-0 h-[42vh] w-[58vw] bg-black/70 px-16 py-14">
+          <nav className="mt-8 flex flex-wrap justify-center gap-x-10 gap-y-4 px-8 text-xl font-bold">
+            {realms.map((realm) => (
+              <button
+                key={realm.name}
+                className={`${realm.className} drop-shadow-[2px_2px_1px_black] transition-all duration-300 hover:scale-110 hover:tracking-widest`}
+              >
+                {realm.name}
+              </button>
+            ))}
+          </nav>
+        </header>
+
+        <div className="absolute bottom-16 right-16 w-[420px] rounded-xl border border-yellow-500/20 bg-black/65 p-8 backdrop-blur-sm">
           <h2 className="text-3xl font-bold text-white drop-shadow-lg">
             The Latest
           </h2>
