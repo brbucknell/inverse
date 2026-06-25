@@ -1,26 +1,87 @@
 @import "tailwindcss";
+@import "@fontsource/cinzel/400.css";
+@import "@fontsource/cinzel/700.css";
+@import "@fontsource/cinzel-decorative/400.css";
+@import "@fontsource/cinzel-decorative/700.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-void: #080a0f;
+  --bg-panel: #0d1018;
+  --gold: #C9A84C;
+  --gold-dim: #8a6e2f;
+  --text-muted: #6b7280;
+
+  /* Realm colours */
+  --realm-inverse: #d1d5db;
+  --realm-rosemera: #e879a0;
+  --realm-cult: #f97316;
+  --realm-undoing: #2dd4bf;
+  --realm-silent: #4ade80;
+  --realm-droskavar: #e2e8f0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-void);
+  color: #e2e8f0;
+  font-family: 'Cinzel', Georgia, serif;
+  overflow-x: hidden;
 }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-void); }
+::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+
+.font-cinzel { font-family: 'Cinzel', serif; }
+.font-cinzel-deco { font-family: 'Cinzel Decorative', serif; }
+
+/* Realm hover glow effects */
+.realm-inverse:hover  { color: var(--realm-inverse);  text-shadow: 0 0 20px rgba(209,213,219,0.6); }
+.realm-rosemera:hover { color: var(--realm-rosemera); text-shadow: 0 0 20px rgba(232,121,160,0.6); }
+.realm-cult:hover     { color: var(--realm-cult);     text-shadow: 0 0 20px rgba(249,115,22,0.6); }
+.realm-undoing:hover  { color: var(--realm-undoing);  text-shadow: 0 0 20px rgba(45,212,191,0.6); }
+.realm-silent:hover   { color: var(--realm-silent);   text-shadow: 0 0 20px rgba(74,222,128,0.6); }
+.realm-droskavar:hover { color: var(--realm-droskavar); text-shadow: 0 0 20px rgba(226,232,240,0.6); }
+
+.realm-link {
+  transition: color 0.3s ease, text-shadow 0.3s ease, padding-left 0.3s ease, letter-spacing 0.3s ease;
+  cursor: pointer;
+  display: block;
+  border-left: 2px solid transparent;
+  padding-left: 0.75rem;
+}
+.realm-link:hover {
+  padding-left: 1.25rem;
+  letter-spacing: 0.1em;
+}
+.realm-link.realm-inverse:hover  { border-left-color: var(--realm-inverse); }
+.realm-link.realm-rosemera:hover { border-left-color: var(--realm-rosemera); }
+.realm-link.realm-cult:hover     { border-left-color: var(--realm-cult); }
+.realm-link.realm-undoing:hover  { border-left-color: var(--realm-undoing); }
+.realm-link.realm-silent:hover   { border-left-color: var(--realm-silent); }
+.realm-link.realm-droskavar:hover { border-left-color: var(--realm-droskavar); }
+
+/* Active realm state */
+.realm-link.active-inverse  { color: var(--realm-inverse);  border-left-color: var(--realm-inverse);  padding-left: 1.25rem; }
+.realm-link.active-rosemera { color: var(--realm-rosemera); border-left-color: var(--realm-rosemera); padding-left: 1.25rem; }
+.realm-link.active-cult     { color: var(--realm-cult);     border-left-color: var(--realm-cult);     padding-left: 1.25rem; }
+.realm-link.active-undoing  { color: var(--realm-undoing);  border-left-color: var(--realm-undoing);  padding-left: 1.25rem; }
+.realm-link.active-silent   { color: var(--realm-silent);   border-left-color: var(--realm-silent);   padding-left: 1.25rem; }
+.realm-link.active-droskavar { color: var(--realm-droskavar); border-left-color: var(--realm-droskavar); padding-left: 1.25rem; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up { animation: fadeInUp 0.5s ease forwards; }
+
+@keyframes shimmer {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+.animate-shimmer { animation: shimmer 3s ease-in-out infinite; }
+
+/* Panel fade-in */
+.panel-enter { opacity: 0; animation: fadeInUp 0.4s ease 0.1s forwards; }
