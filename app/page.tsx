@@ -26,14 +26,7 @@ export default function Home() {
           <h1 className="font-cinzel-deco text-6xl font-bold text-black drop-shadow-[2px_2px_3px_rgba(255,255,255,0.5)]">
             The Anomaly
           </h1>
-
-          <h2 className="mt-4 text-3xl font-bold text-yellow-400 drop-shadow-[2px_2px_1px_black]">
-            Universe Name
-          </h2>
-
-          <h3 className="mt-1 text-xl font-semibold text-yellow-300 drop-shadow-[2px_2px_1px_black]">
-            Planet Name
-          </h3>
+          
 
          <nav className="mt-8 mx-auto flex max-w-4xl flex-wrap justify-center gap-x-10 gap-y-4 rounded-xl border border-yellow-500/20 bg-black/50 px-8 py-4 text-xl font-bold backdrop-blur-sm">
   {realms.map((realm) => (
