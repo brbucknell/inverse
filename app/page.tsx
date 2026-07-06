@@ -2,7 +2,7 @@
 
 export default function Home() {
   const realms = [
-    { name: "The Inverse", className: "text-black" },
+    { name: "The Inverse", className: " text-slate-100" },
     { name: "Rosemera", className: "text-pink-300" },
     { name: "The Cult Lands", className: "text-orange-500" },
     { name: "The Undoing", className: "text-teal-500" },
