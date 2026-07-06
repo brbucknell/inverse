@@ -35,16 +35,16 @@ export default function Home() {
             Planet Name
           </h3>
 
-          <nav className="mt-8 flex flex-wrap justify-center gap-x-10 gap-y-4 px-8 text-xl font-bold">
-            {realms.map((realm) => (
-              <button
-                key={realm.name}
-                className={`${realm.className} drop-shadow-[2px_2px_1px_black] transition-all duration-300 hover:scale-110 hover:tracking-widest`}
-              >
-                {realm.name}
-              </button>
-            ))}
-          </nav>
+         <nav className="mt-8 mx-auto flex max-w-4xl flex-wrap justify-center gap-x-10 gap-y-4 rounded-xl border border-yellow-500/20 bg-black/50 px-8 py-4 text-xl font-bold backdrop-blur-sm">
+  {realms.map((realm) => (
+    <button
+      key={realm.name}
+      className={`${realm.className} drop-shadow-[2px_2px_1px_black] transition-all duration-300 hover:scale-110 hover:tracking-widest`}
+    >
+      {realm.name}
+    </button>
+  ))}
+</nav>
         </header>
 
         <div className="absolute bottom-16 right-16 w-[420px] rounded-xl border border-yellow-500/20 bg-black/65 p-8 backdrop-blur-sm">
