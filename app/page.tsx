@@ -5,6 +5,7 @@ export default function Home() {
     { name: "The Inverse", className: "text-slate-100" },
     { name: "Rosemera", className: "text-pink-300" },
     { name: "The Cult Lands", className: "text-orange-500" },
+    <br></br>,
     { name: "The Undoing", className: "text-teal-500" },
     { name: "The Silent Expanse", className: "text-green-800" },
     { name: "Droskavar", className: "text-slate-300" },
