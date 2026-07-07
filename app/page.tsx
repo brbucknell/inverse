@@ -25,7 +25,7 @@ export default function Home() {
     The Anomaly
   </h1>
   
-         <nav className="mt-40 flex w-full max-w-4xl flex-wrap justify-center gap-x-10 gap-y-3 rounded-xl border border-yellow-500/20 bg-black/50 px-8 py-3 text-xl font-bold backdrop-blur-sm">
+         <nav className="mt-80 flex w-full max-w-4xl flex-wrap justify-center gap-x-10 gap-y-3 rounded-xl border border-yellow-500/20 bg-black/50 px-8 py-3 text-xl font-bold backdrop-blur-sm">
     {realms.map((realm) => (
       <button
         key={realm.name}
