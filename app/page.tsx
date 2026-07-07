@@ -31,7 +31,7 @@ export default function Home() {
   <div style={{ height: "25px" }} />
 
   <section className="nav-section flex w-full justify-center">
-    <nav className="flex w-full max-w-4xl flex-wrap justify-center gap-x-6 gap-y-3 rounded-xl border border-yellow-500/20 bg-black/50 px-8 py-3 text-xl font-bold backdrop-blur-sm">
+    <nav className="flex w-full max-w-2xl flex-wrap justify-center gap-x-6 gap-y-3 rounded-xl border border-yellow-500/20 bg-black/50 px-8 py-3 text-xl font-bold backdrop-blur-sm">
       {realms.map((realm) => (
         <button
           key={realm.name}
