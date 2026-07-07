@@ -28,7 +28,7 @@ export default function Home() {
     </h1>
   </section>
 
-  <div style={{ height: "100px" }} />
+  <div style={{ height: "25px" }} />
 
   <section className="nav-section flex w-full justify-center">
     <nav className="flex w-full max-w-4xl flex-wrap justify-center gap-x-6 gap-y-3 rounded-xl border border-yellow-500/20 bg-black/50 px-8 py-3 text-xl font-bold backdrop-blur-sm">
