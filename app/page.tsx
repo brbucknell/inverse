@@ -20,12 +20,12 @@ export default function Home() {
       />
       <div className="absolute inset-0 bg-black/10" />
       <section className="relative z-10 min-h-screen">
-       <header className="pt-8 mb-12 flex flex-col items-center text-center">
+       <header className="pt-8 flex flex-col items-center text-center">
   <h1 className="font-cinzel-deco text-6xl font-bold text-black drop-shadow-[2px_2px_3px_rgba(255,255,255,0.5)]">
     The Anomaly
   </h1>
   
-         <nav className="mt-12 flex w-full max-w-4xl flex-wrap justify-center gap-x-10 gap-y-3 rounded-xl border border-yellow-500/20 bg-black/50 px-8 py-3 text-xl font-bold backdrop-blur-sm">
+         <nav className="mt-24 flex w-full max-w-4xl flex-wrap justify-center gap-x-10 gap-y-3 rounded-xl border border-yellow-500/20 bg-black/50 px-8 py-3 text-xl font-bold backdrop-blur-sm">
     {realms.map((realm) => (
       <button
         key={realm.name}
