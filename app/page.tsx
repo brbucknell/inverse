@@ -15,7 +15,7 @@ export default function Home() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/inverse3.png')",
+          backgroundImage: "url('/inverse2.png')",
         }}
       />
       <div className="absolute inset-0 bg-black/10" />
