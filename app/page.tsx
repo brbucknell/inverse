@@ -24,8 +24,8 @@ export default function Home() {
   <h1 className="font-cinzel-deco text-6xl font-bold text-black drop-shadow-[2px_2px_3px_rgba(255,255,255,0.5)]">
     The Anomaly
   </h1>
-   <br></br>      
-  <nav className="mt-4 flex w-full max-w-4xl flex-wrap justify-center gap-x-10 gap-y-3 rounded-xl border border-yellow-500/20 bg-black/50 px-8 py-3 text-xl font-bold backdrop-blur-sm">
+  
+         <nav className="mt-12 flex w-full max-w-4xl flex-wrap justify-center gap-x-10 gap-y-3 rounded-xl border border-yellow-500/20 bg-black/50 px-8 py-3 text-xl font-bold backdrop-blur-sm">
     {realms.map((realm) => (
       <button
         key={realm.name}
@@ -34,7 +34,8 @@ export default function Home() {
         {realm.name}
       </button>
     ))}
-  </nav>
+        </nav>
+         
 </header>
 
         <div className="absolute bottom-16 right-16 w-[420px] rounded-xl border border-yellow-500/20 bg-black/65 p-8 backdrop-blur-sm">
