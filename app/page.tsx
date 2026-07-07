@@ -20,23 +20,32 @@ export default function Home() {
       />
       <div className="absolute inset-0 bg-black/10" />
       <section className="relative z-10 min-h-screen">
-       <header className="pt-8 flex flex-col items-center text-center">
-  <h1 className="font-cinzel-deco text-6xl font-bold text-black drop-shadow-[2px_2px_3px_rgba(255,255,255,0.5)]">
-    The Anomaly
-  </h1>
-  
-         <nav className="mt-80 flex w-full max-w-4xl flex-wrap justify-center gap-x-10 gap-y-3 rounded-xl border border-yellow-500/20 bg-black/50 px-8 py-3 text-xl font-bold backdrop-blur-sm">
-    {realms.map((realm) => (
-      <button
-        key={realm.name}
-        className={`${realm.className} drop-shadow-[2px_2px_1px_black] transition-all duration-300 hover:scale-110 hover:tracking-widest`}
-      >
-        {realm.name}
-      </button>
-    ))}
-        </nav>
-         
+
+        <header className="pt-8 flex flex-col items-center text-center">
+  <section className="title-section">
+    <h1 className="font-cinzel-deco text-6xl font-bold text-black drop-shadow-[2px_2px_3px_rgba(255,255,255,0.5)]">
+      The Anomaly
+    </h1>
+  </section>
+
+  <div style={{ height: "150px" }} />
+
+  <section className="nav-section flex w-full justify-center">
+    <nav className="flex w-full max-w-4xl flex-wrap justify-center gap-x-10 gap-y-3 rounded-xl border border-yellow-500/20 bg-black/50 px-8 py-3 text-xl font-bold backdrop-blur-sm">
+      {realms.map((realm) => (
+        <button
+          key={realm.name}
+          className={`${realm.className} drop-shadow-[2px_2px_1px_black] transition-all duration-300 hover:scale-110 hover:tracking-widest`}
+        >
+          {realm.name}
+        </button>
+      ))}
+    </nav>
+  </section>
 </header>
+     
+         
+
 
         <div className="absolute bottom-16 right-16 w-[420px] rounded-xl border border-yellow-500/20 bg-black/65 p-8 backdrop-blur-sm">
           <h2 className="text-3xl font-bold text-white drop-shadow-lg">
