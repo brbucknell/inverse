@@ -5,7 +5,6 @@ export default function Home() {
     { name: "The Inverse", className: "text-slate-100" },
     { name: "Rosemera", className: "text-pink-300" },
     { name: "The Cult Lands", className: "text-orange-500" },
-    <br></br>,
     { name: "The Undoing", className: "text-teal-500" },
     { name: "The Silent Expanse", className: "text-green-800" },
     { name: "Droskavar", className: "text-slate-300" },
@@ -25,6 +24,7 @@ export default function Home() {
   <h1 className="font-cinzel-deco text-6xl font-bold text-black drop-shadow-[2px_2px_3px_rgba(255,255,255,0.5)]">
     The Anomaly
   </h1>
+   <br></br>      
   <nav className="mt-4 flex w-full max-w-4xl flex-wrap justify-center gap-x-10 gap-y-3 rounded-xl border border-yellow-500/20 bg-black/50 px-8 py-3 text-xl font-bold backdrop-blur-sm">
     {realms.map((realm) => (
       <button
